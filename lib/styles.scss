@@ -1,21 +1,27 @@
+.Search {
+  border: 1px solid black;
+  width: 90%;
+  height: 50px;
+}
+
 .Current {
   border: 1px solid black;
   width: 60%;
   height: 400px;;
 }
 
-.Hourly {
-  border: 1px solid black;
-  display: inline-block;
-  width: 12%;
-  height: 200px;
-}
-
-.TenDay {
-  border: 1px solid black;
-  width: 12%;
-  height: 200px;
-}
+// .Hourly {
+//   border: 1px solid black;
+//   display: inline-block;
+//   width: 12%;
+//   height: 200px;
+// }
+//
+// .TenDay {
+//   border: 1px solid black;
+//   width: 12%;
+//   height: 200px;
+// }
 
 .WeatherCard {
   border: 1px solid black;
