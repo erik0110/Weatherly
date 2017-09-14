@@ -57,6 +57,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "CompleteMe": "git+https://github.com/lfinney/complete-me.git",
     "jquery": "^3.2.1"
   }
 }
