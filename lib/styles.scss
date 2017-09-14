@@ -1,32 +1,94 @@
+.searchContainer {
+  display: flex;
+  background-color: maroon;
+  flex-direction: row;
+  height: 20vh;
+}
+
 .Search {
   border: 1px solid black;
-  width: 90%;
+  display: inline-block;
+  width: 40%;
   height: 50px;
 }
 
-.Current {
-  border: 1px solid black;
-  width: 60%;
-  height: 400px;;
+.searchBar {
+
 }
 
+.mainHeader {
+  color: white;
+  display: inline-block;
+  font-size: 60px;
+  margin: 0;
+  width: 60%;
+}
+/*     CURRENT     */
+.Current {
+  align-items: center;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  height: 400px;;
+  width: 60%;
+}
+
+.currentCity {
+  font-size: 44px;
+  margin: 25px 0 0 0;
+}
+
+.currentTemp {
+  font-size: 30px;
+}
+
+.currentCondition {
+
+}
+
+.lowHighContainer {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  width: 40%;
+}
+
+.lowTemp {
+  display: inline-block;
+  font-size: 18px;
+  color: blue;
+}
+
+.highTemp {
+  display: inline-block;
+  font-size: 18px;
+  color: red;
+}
+
+.description {
+  margin: 10px 20px;
+}
+
+/*     WEATHERCARD     */
 .WeatherCard {
+
+}
+
+/*     HOURLY     */
+.hourlyCard {
+  display: inline-block;
   border: 1px solid black;
   width: 12%;
   height: 200px;
 }
 
-
-// .Hourly {
-//   display: inline-block;
-// }
-//
 // .TenDay {
 //   display: inline-block;
 // }
 //
 //
-
-// .hourOne {
-//   background-color: red;
-// }
+.dailyContainer {
+  background-color: turquoise;
+  width: 75%;
+  height: 80vh;
+}
