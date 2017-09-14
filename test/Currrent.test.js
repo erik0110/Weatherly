@@ -1,6 +1,6 @@
 import React from 'react';
-import Current from '../lib/Current.js';
-import forecastData from '../practice-data/forecastData.js';
+import Current from '../lib/Current';
+import forecastData from '../practice-data/forecastData';
 import { shallow, mount } from 'enzyme';
 
 describe('Current functionality', () => {
@@ -24,6 +24,8 @@ describe('Current functionality', () => {
     let day = location.find('.currentDay');
     let condition = location.find('.currentCondition');
 
+
+    console.log(location.debug());
     expect(city.text()).toEqual("Current City: " + dummyData.current_observation.display_location.full);
     expect(temp.text()).toEqual("Current Temp: " + dummyData.current_observation.temp_f);
     expect(day.text()).toEqual("Current Day: " + dummyData.forecast.simpleforecast.forecastday[1].date.pretty);
