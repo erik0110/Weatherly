@@ -1,0 +1,60 @@
+body {
+
+}
+
+/*  SEARCH BAR   */
+.searchContainer {
+  width: 100%;
+  height: 500px;
+}
+
+.Welcome {
+    width: 50%;
+}
+
+.Search {
+  border: 1px solid black;
+  width: 50%;
+  height: 20px;
+}
+
+
+/*   CURRENT   */
+.Current {
+  border: 1px solid black;
+  display: inline-block;
+  width: 40%;
+  height: 600px;
+  margin: 0;
+}
+
+/*   HOURLY    */
+.Hourly {
+  border: 1px solid black;
+  display: inline-block;
+  width: 59%;
+  height: 600px;;
+  margin: 0;
+}
+
+/*   WEATHERCard   */
+.WeatherCard {
+  border: 1px solid black;
+  width: 12%;
+  height: 200px;
+}
+
+
+// .Hourly {
+//   display: inline-block;
+// }
+//
+// .TenDay {
+//   display: inline-block;
+// }
+//
+//
+
+// .hourOne {
+//   background-color: red;
+// }
