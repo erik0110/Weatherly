@@ -1,6 +1,6 @@
 import React from 'react';
 import Current from '../lib/Current';
-import forecastData from '../practice-data/forecastData';
+import forecastData from '../data/forecastData';
 import { shallow, mount } from 'enzyme';
 
 describe('Current functionality', () => {
