@@ -1060,7 +1060,7 @@ export default{
         "english": "84",
         "metric": "29"
       },
-      "dewpoint": {
+      // "dewpoint": {
         "english": "38",
         "metric": "3"
       },
