@@ -27,7 +27,21 @@
   margin: 0;
   width: 60%;
 }
+
+.mainContent {
+  display: flex;
+
+}
+
 /*     CURRENT     */
+.dailyContainer {
+  width: 75%;
+  background-color: #E56771;
+  min-width: 600px;
+  height: 500px;
+  box-shadow: 5px 5px 5px #303030;;
+}
+
 .Current {
   align-items: center;
   display: flex;
@@ -78,22 +92,22 @@
 }
 
 /*     HOURLY     */
+.Hourly {
+  display: flex;
+  justify-content: space-between;
+}
+
 .hourlyCard {
   display: inline-block;
   border: 1px solid black;
-  width: 12%;
-  height: 200px;
 }
 
-// .TenDay {
-//   display: inline-block;
-// }
-//
-//
-.dailyContainer {
-  width: 75%;
-  background-color: #E56771;
-  min-width: 600px;
-  height: 500px;
-  box-shadow: 5px 5px 5px #303030;;
+/* TEN DAY */
+.tenDayContainer {
+  width: 25%;
+}
+
+.TenDay {
+  display: flex;
+  flex-direction: column;
 }
