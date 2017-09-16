@@ -1,6 +1,10 @@
+.App {
+  background-color: #456990;
+  color: #E7EFE6;
+}
+
 .searchContainer {
   display: flex;
-  background-color: maroon;
   flex-direction: row;
   height: 20vh;
 }
@@ -26,11 +30,10 @@
 /*     CURRENT     */
 .Current {
   align-items: center;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   height: 400px;;
-  width: 60%;
+  width: 100%;
 }
 
 .currentCity {
@@ -88,7 +91,9 @@
 //
 //
 .dailyContainer {
-  background-color: turquoise;
   width: 75%;
-  height: 80vh;
+  background-color: #E56771;
+  min-width: 600px;
+  height: 500px;
+  box-shadow: 5px 5px 5px #303030;;
 }
