@@ -5,20 +5,31 @@
 .App {
   background-color: #456990;
   color: #E7EFE6;
+  display: flex;
 }
 
 .searchContainer {
   display: flex;
   flex-direction: row;
-  height: 20vh;
-  display: none;
+  height: 500px;
 }
 
 .Search {
-  border: 1px solid black;
-  display: inline-block;
-  width: 40%;
-  height: 50px;
+  background-color: #F3DE8A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5%;
+}
+
+.searchInput {
+  width: 325px;
+}
+
+.searchButton {
+  width: 75px;
+  margin-left: 10px;
 }
 
 .searchBar {
@@ -29,12 +40,14 @@
   color: white;
   display: inline-block;
   font-size: 60px;
+  height: 500px;
   margin: 0;
   width: 60%;
 }
 
 .mainContent {
   display: flex;
+  width: 100%;
 
 }
 
@@ -51,8 +64,8 @@
   background-color: #E56771;
   display: flex;
   flex-direction: column;
-  min-height: 700px;
-  height: 80%;
+  // min-height: 700px;
+  height: 75%;
   width: 100%;
 }
 
@@ -76,15 +89,17 @@
   width: 40%;
 }
 
-.lowTemp {
+.lowTemp .highTemp {
   display: inline-block;
   font-size: 18px;
+  margin: auto;
+}
+
+.lowTemp {
   color: blue;
 }
 
 .highTemp {
-  display: inline-block;
-  font-size: 18px;
   color: red;
 }
 
@@ -93,18 +108,12 @@
 }
 
 /*     WEATHERCARD     */
-.WeatherCard {
-  margin: auto;
-  height: 70px;
-}
-
-.time .highTemp{
-  margin: 0;
-  text-align: center;
-}
-
 .weatherIcon {
-  margin: auto;
+  display: inline-block;
+  margin-left: auto;
+  height: 30px;
+  width: 30px;
+  margin-right: auto;
 }
 
 /*     HOURLY     */
@@ -116,11 +125,20 @@
   margin: auto;
 }
 
+.hourlyCard, .tenDayCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .hourlyCard {
-  display: inline-block;
-  border: 1px solid black;
   width: 12%;
   height: 100px;
+}
+
+.time, .temp {
+  text-align: center;
 }
 
 /* TEN DAY */
@@ -136,8 +154,8 @@
 }
 
 .tenDayCard {
-  width: 50%;
-  min-width: 50px;
+  width: 60%;
+  min-width: 60px;
   height: 60px;
   margin: auto;
 }
