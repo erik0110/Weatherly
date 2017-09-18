@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 .App {
   background-color: #456990;
   color: #E7EFE6;
@@ -7,6 +11,7 @@
   display: flex;
   flex-direction: row;
   height: 20vh;
+  display: none;
 }
 
 .Search {
@@ -35,18 +40,19 @@
 
 /*     CURRENT     */
 .dailyContainer {
-  width: 75%;
-  background-color: #E56771;
+  width: 85%;
   min-width: 600px;
-  height: 500px;
-  box-shadow: 5px 5px 5px #303030;;
+  height: 100vh;
+  // box-shadow: 5px 5px 5px #303030;;
 }
 
 .Current {
   align-items: center;
+  background-color: #E56771;
   display: flex;
   flex-direction: column;
-  height: 400px;;
+  min-height: 700px;
+  height: 80%;
   width: 100%;
 }
 
@@ -88,26 +94,50 @@
 
 /*     WEATHERCARD     */
 .WeatherCard {
+  margin: auto;
+  height: 70px;
+}
 
+.time .highTemp{
+  margin: 0;
+  text-align: center;
+}
+
+.weatherIcon {
+  margin: auto;
 }
 
 /*     HOURLY     */
 .Hourly {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 20%;
+  margin: auto;
 }
 
 .hourlyCard {
   display: inline-block;
   border: 1px solid black;
+  width: 12%;
+  height: 100px;
 }
 
 /* TEN DAY */
 .tenDayContainer {
-  width: 25%;
+  width: 15%;
+  height: 100vh;
 }
 
 .TenDay {
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+.tenDayCard {
+  width: 50%;
+  min-width: 50px;
+  height: 60px;
+  margin: auto;
 }
