@@ -1,49 +1,37 @@
 import React from 'react';
 import Current from '../lib/Current';
-import forecastData from '../data/forecastData';
+import forecastData from '../data/completeForecast';
+import cleanData from '../lib/CleanData';
 import { shallow, mount } from 'enzyme';
 
 describe('Current functionality', () => {
-  const dummyData = forecastData
-  const location = shallow(
-    <Current
-      locProp={dummyData.current_observation.display_location.full}
-      tempProp={dummyData.current_observation.temp_f}
-      dayProp={dummyData.forecast.simpleforecast.forecastday[1].date.pretty}
-      conditionProp={dummyData.forecast.simpleforecast.forecastday[1].conditions}
-      lowProp={dummyData.forecast.simpleforecast.forecastday[1].low.fahrenheit}
-      highProp={dummyData.forecast.simpleforecast.forecastday[1].high.fahrenheit}
-      descriptionProp={dummyData.forecast.txt_forecast.forecastday[1].fcttext}
-    />
-  );
+  const dummyData = cleanData(forecastData);
+  let wrapper
 
+  beforeEach(() => {
+    wrapper = shallow(
+      <Current
+        current={dummyData.current}
+      />
+    );
+  });
+
+  it('should render a Current component', () => {
+    expect(wrapper.find('.Current').length).toEqual(1);
+  });
 
   it('should identify the current city, temp, day, and condition', () => {
-    let city = location.find('.currentCity');
-    let temp = location.find('.currentTemp');
-    let day = location.find('.currentDay');
-    let condition = location.find('.currentCondition');
-
-
-    console.log(location.debug());
-    expect(city.text()).toEqual("Current City: " + dummyData.current_observation.display_location.full);
-    expect(temp.text()).toEqual("Current Temp: " + dummyData.current_observation.temp_f);
-    expect(day.text()).toEqual("Current Day: " + dummyData.forecast.simpleforecast.forecastday[1].date.pretty);
-    expect(condition.text()).toEqual("Current Condition: " + dummyData.forecast.simpleforecast.forecastday[1].conditions);
+    expect(wrapper.find('.currentCity').text()).toEqual(dummyData.current.currentCity);
+    expect(wrapper.find('.currentTemp').text()).toEqual(dummyData.current.currentTemp + '°F & ' + dummyData.current.currentCondition);
+    expect(wrapper.find('.currentDay').text()).toEqual('It is ' + dummyData.current.currentDay + ' in');
   });
 
   it('should be able to identify the high and low for the day', () => {
-    let low = location.find('.lowTemp');
-    let high = location.find('.highTemp');
-
-    expect(low.text()).toEqual("Low: " + dummyData.forecast.simpleforecast.forecastday[1].low.fahrenheit);
-    expect(high.text()).toEqual("High: " + dummyData.forecast.simpleforecast.forecastday[1].high.fahrenheit);
+    expect(wrapper.find('.lowTemp').text()).toEqual(dummyData.current.lowTemp);
+    expect(wrapper.find('.highTemp').text()).toEqual(dummyData.current.highTemp);
   });
 
   it('should be able to describe the overall daily conditions', () => {
-    let description = location.find('.description');
-
-
-    expect(description.text()).toEqual("Forecast description: " + dummyData.forecast.txt_forecast.forecastday[1].fcttext);
+    expect(wrapper.find('.description').text()).toEqual(dummyData.current.description);
   });
 });
