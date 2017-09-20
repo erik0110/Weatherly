@@ -1,16 +1,35 @@
 * {
   margin: 0;
   font-family: "Montserrat", "serif";
+  height: 100%;
+  box-sizing: border-box;
 }
 
 h1, h2 {
   font-family: "Baloo Tammudu", "sans-serif";
 }
 
-.App {
-  background-color: #395676;
-  color: #E7EFE6;
+.welcomeScreen {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  margin: auto;
+}
+
+.welcomeSearch {
+  width: 100%;
+  height: 80px;
+}
+
+.App {
+  background-color: #74A4BC;
+  color: #F1FEC6;
+}
+
+.mainSearch{
+  height: 5%;
 }
 
 .searchContainer {
@@ -19,58 +38,91 @@ h1, h2 {
   height: 500px;
 }
 
+.searchPrompt {
+  display: inline-block;
+  margin-top: 55px;
+}
+
+.welcomeSearch .Search {
+  border-radius: 20px;
+  border-right: solid 2px #2A2C37;
+  border-bottom: solid 2px #2A2C37;
+  box-shadow: 0 2px 1px 1px #64656D;
+}
+
+.mainSearch .Search .searchPrompt {
+  margin-top: 20px;
+}
+
 .Search {
-  background-color: #DDCA7E;
+  background-color: #F48600;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 5%;
+  height: 100%;
 }
 
+
 .searchInput {
-  width: 325px;
+  width: 45%;
+  height: 50%;
+  margin: 5px 10px;
+  border-radius: 20px;
+  padding-left: 10px;
+  font-size: 1.2em;
+  border: none;
 }
 
 .searchButton {
+  color: #FDFFDB;
+  background-color: #585858;
   width: 75px;
-  margin-left: 10px;
-}
-
-.searchBar {
-
+  height: 50%;
+  border: none;
+  border-radius: 20px;
 }
 
 .mainHeader {
-  color: white;
+  color: #FDFFDB;
   display: inline-block;
-  font-size: 60px;
-  height: 500px;
+  font-size: 4.3em;
+  height: 150px;
+  text-align: center;
   margin: 0;
-  width: 60%;
+  width: 100%;
 }
 
 .mainContent {
   display: flex;
+  flex-direction: column;
   width: 100%;
 
 }
 
 /*     CURRENT     */
 .dailyContainer {
-  width: 85%;
+  width: 100%;
   min-width: 600px;
-  height: 100vh;
-  // box-shadow: 5px 5px 5px #303030;;
+  height: 75%;
+  display: flex;
 }
 
 .Current {
-  background-color: #D15E67;
-  height: 75%;
-  width: 100%;
+  height: 100%;
+  width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.currentDay, .currentCity, .currentTemp, .currentStyles, .dailyTemperatures, .description {
+  display: inline-block;
+  height: auto;
+}
+
+.currentDay {
+  text-align: center;
 }
 
 .currentWeather {
@@ -78,22 +130,22 @@ h1, h2 {
   align-items: center;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 75%;
   height: 500px;
-  padding: 5%;
+  padding: 2%;
 }
 
 .currentCity {
-  font-size: 44px;
-  margin: 25px 0 0 0;
+  font-size: 4.2em;
 }
 
 .currentTemp {
-  font-size: 30px;
+  font-size: 3.5em;
+  height: 20%;
 }
 
-.currentCondition {
-
+.currentStyles {
+  height: 15px;
 }
 
 .lowHighContainer {
@@ -116,8 +168,18 @@ h1, h2 {
   margin: auto;
 }
 
+p .dailyTemps, .lowTemp, .highTemp {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.currentLow, .currentHigh {
+  font-size: 2em;
+}
+
 .lowTemp {
-  color: #29339B;
+  color: #AFD39B;
+  padding-right: 10px;
 }
 
 .highTemp {
@@ -126,37 +188,87 @@ h1, h2 {
 
 .description {
   margin: 10px 20px;
+  width: 100%;
+  font-size: 2em;
+  text-align: center;
 }
 
 /*     WEATHERCARD     */
 .weatherIcon {
   display: inline-block;
-  margin-left: auto;
   height: 30px;
   width: 30px;
-  margin-right: auto;
+  margin: 5px auto
 }
 
 /*     HOURLY     */
+.hourlyHeading {
+  height: 5%;
+  margin-top: 10px;
+}
+
+.hourlyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+}
+
 .Hourly {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  height: 20%;
+  height: 95%;
+  width: 100%;
   margin: auto;
+  flex-wrap: wrap;
+
+}
+
+.currentWeather, .hourlyCard, .tenDayCard {
+  border-radius: 20px;
+  border-right: solid 2px #2A2C37;
+  border-bottom: solid 2px #2A2C37;
+  box-shadow: 2px 2px 1px 1px #64656D;
 }
 
 .hourlyCard, .tenDayCard {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #585858;
-  height: 100px;
+  background-color: #5E738E;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.hourlyFlex {
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+}
+
+.hourlyFlex .weatherIcon {
+  margin-left: 10px;
 }
 
 .hourlyCard {
-  width: 13%;
+  width: 40%;
+  height: 12%;
+  min-height: 80px;
+  min-width: 115px;
+  margin: 5px 0;
+}
+
+.time, .date {
+  font-size: .8em;
+  height: 20px;
+}
+
+p .date {
+  margin-top: 10px;
 }
 
 .temp {
@@ -164,19 +276,89 @@ h1, h2 {
 }
 
 /* TEN DAY */
+.tenDayHeading {
+  height: 25%;
+}
+
 .tenDayContainer {
-  width: 15%;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 20%;
+  padding: 10px;
 }
 
 .TenDay {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 90%;
+  width: 100%;
 }
 
 .tenDayCard {
-  width: 60%;
-  min-width: 60px;
-  margin: auto;
+  width: 8%;
+  min-width: 105px;
+  padding: 10px;
+  margin: 0 5px;
+  height: 100px;
+}
+
+@media screen and (max-width: 1310px) {
+
+
+  .dailyContainer {
+    height: 60%;
+  }
+
+  .tenDayContainer {
+    height: 40%;
+  }
+
+  .Current {
+    width: 50%
+  }
+
+  .Hourly {
+    justify-content: flex-start;
+  }
+
+  .hourlyContainer {
+    width: 50%;
+  }
+
+  .hourlyCard {
+    height: 110px;
+  }
+
+  .tenDayCard {
+    width: 15%;
+    margin: 0 1%
+  }
+
+  .currentWeather {
+    padding: 10px;
+  }
+
+  .currentCity {
+    font-size: 2.5em;
+  }
+
+  .currentTemp {
+    font-size: 2.2em;
+  }
+
+  .description {
+    font-size: 1.4em;
+  }
+
+  .lowHighContainer {
+    width: 100%;
+  }
+
+  .currentLow, .currentHigh {
+    font-size: 1.2em;
+  }
+
 }
